@@ -1,0 +1,58 @@
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.category {
+  display: inline-block;
+  background: #fce7f3;
+  color: #be185d;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  font-weight: 500;
+}
+
+.price {
+  color: var(--text);
+}
+
+.stock {
+  color: #6b7280;
+}
+
+.buyBtn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buyBtn:disabled {
+  background: #e5e7eb;
+  color: #6b7280;
+  cursor: not-allowed;
+}

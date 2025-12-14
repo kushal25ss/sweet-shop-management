@@ -1,0 +1,109 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+  padding: 0 32px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.navLinks {
+  display: flex;
+  gap: 28px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+  position: relative;
+}
+
+.navLinks a::after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  background: var(--primary);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.loginBtn {
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobileMenu a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.mobileMenu button {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .loginBtn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .loginBtn a {
+  color: white;
+  text-decoration: none;
+}
+
+}
